@@ -43,8 +43,8 @@ WebDriver driver = null;
         driver.findElement(By.id("username")).sendKeys("admin");
         driver.findElement(By.id("password")).sendKeys("admin123");
         driver.findElement(By.xpath("/html/body/div/form/input[3]")).click();
-        String expectedTittle = "Welcome back, admin!";
-        String actualTittle = driver.findElement(By.xpath("/html/body/div/p")).getText();
+        String expectedTittle = "Wrong username or password!";
+        String actualTittle = driver.findElement(By.xpath("/html/body/div/div")).getText();
         Assert.assertEquals(actualTittle,expectedTittle);
     }
     
