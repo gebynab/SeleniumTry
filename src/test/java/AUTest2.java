@@ -6,7 +6,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -24,7 +23,7 @@ import org.testng.annotations.Test;
  *
  * @author PLUTO5
  */
-public class AUTest1 {
+public class AUTest2 {
 WebDriver driver = null;
     
     @BeforeTest
@@ -41,7 +40,7 @@ WebDriver driver = null;
     public void firstTry(){
         driver.get("http://localhost/index.php");
         driver.findElement(By.id("username")).sendKeys("admin");
-        driver.findElement(By.id("password")).sendKeys("admin123");
+        driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.xpath("/html/body/div/form/input[3]")).click();
         String expectedTittle = "Welcome back, admin!";
         String actualTittle = driver.findElement(By.xpath("/html/body/div/p")).getText();
